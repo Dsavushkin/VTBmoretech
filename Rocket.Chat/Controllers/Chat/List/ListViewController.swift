@@ -20,9 +20,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "ListReady"), object: self, queue: OperationQueue.main) { (_) in
-           // self.sendTextMessage(text: "kokoko", replyThreadIdentifier: self.threadIdentifier ?? "")
-        }
+
         view.backgroundColor = UIColor.clear
         view.isOpaque = false
         
