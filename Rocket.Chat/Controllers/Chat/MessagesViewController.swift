@@ -213,6 +213,12 @@ final class MessagesViewController: RocketChatViewController, MessagesListProtoc
         markAsRead()
         becomeFirstResponder()
         updateAnnouncementBanner()
+        
+        let storyboard = UIStoryboard(name: "Chat", bundle: nil)
+        let modalViewController = storyboard.instantiateViewController(withIdentifier: "ListViewController")
+        modalViewController.modalPresentationStyle = .overCurrentContext
+        present(modalViewController, animated: true, completion: nil)
+
     }
 
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
