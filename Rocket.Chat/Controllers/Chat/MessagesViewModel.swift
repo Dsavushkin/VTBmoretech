@@ -209,8 +209,14 @@ final class MessagesViewModel {
 
     // MARK: Life Cycle Controls
 
+    @objc func handleNotification(nnn: Notification) {
+         self.sendTextMessage(text: "kokoko", replyThreadIdentifier: self.threadIdentifier ?? "")
+    }
+    
     init(controllerContext: UIViewController? = nil) {
         self.controllerContext = controllerContext
+        NotificationCenter.default.addObserver(self, selector:  #selector(MessagesViewModel.handleNotification), name: NSNotification.Name(rawValue: "ListReady"), object: nil)
+
     }
 
     internal func destroy() {
