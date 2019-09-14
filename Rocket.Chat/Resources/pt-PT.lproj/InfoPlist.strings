@@ -1,0 +1,13 @@
+/* 
+  InfoPlist.strings
+  Rocket.Chat
+
+  Created by Artur Rymarz on 12.07.2018.
+  Copyright © 2018 Rocket.Chat. All rights reserved.
+*/
+
+add-server-shortcut = "Adicionar Servidor";
+NSCameraUsageDescription = "Para tirar fotos e gravar vídeos";
+NSMicrophoneUsageDescription = "Para gravar e fazer upload de áudio e vídeos";
+NSPhotoLibraryAddUsageDescription = "Para salvar imagens em sua biblioteca";
+NSPhotoLibraryUsageDescription = "Para fazer upload de fotos da sua biblioteca";
