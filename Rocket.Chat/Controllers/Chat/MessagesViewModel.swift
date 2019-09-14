@@ -216,7 +216,6 @@ final class MessagesViewModel {
     init(controllerContext: UIViewController? = nil) {
         self.controllerContext = controllerContext
         NotificationCenter.default.addObserver(self, selector:  #selector(MessagesViewModel.handleNotification), name: NSNotification.Name(rawValue: "ListReady"), object: nil)
-
     }
 
     internal func destroy() {
