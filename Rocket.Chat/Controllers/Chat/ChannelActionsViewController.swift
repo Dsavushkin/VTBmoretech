@@ -44,7 +44,7 @@ class ChannelActionsViewController: BaseViewController {
                 if subscription.isDiscussion {
                     header = [ChannelInfoBasicCellData(title: subscription.fname)]
                 } else {
-                    header = [ChannelInfoBasicCellData(title: "#\(subscription.name)")]
+                    header = [ChannelInfoBasicCellData(title: "\(subscription.name)")]
                 }
 
                 if hasDescription {

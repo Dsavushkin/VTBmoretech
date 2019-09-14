@@ -26,6 +26,8 @@ final class MainSplitViewController: UISplitViewController {
 
     static var subscriptionsViewController: SubscriptionsViewController? {
         return current?.subscriptionsViewController
+        
+        
     }
 
     var chatViewController: MessagesViewController? {
@@ -40,6 +42,7 @@ final class MainSplitViewController: UISplitViewController {
 
     var subscriptionsViewController: SubscriptionsViewController? {
         return (viewControllers.first as? UINavigationController)?.viewControllers.first as? SubscriptionsViewController
+    
     }
 
     override func awakeFromNib() {

@@ -93,7 +93,7 @@ extension MessagesViewController: ComposerViewExpandedDelegate {
 
         case .room(let room):
             let cell = hintsView.dequeueReusableCell(withType: TextHintLabelCell.self)
-            cell.prefixView.text = "#"
+            cell.prefixView.text = ""
             cell.valueLabel.text = room.name
             return cell
 

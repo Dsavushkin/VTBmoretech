@@ -67,7 +67,7 @@ class MessagesListViewData {
     var total: Int = 0
 
     var title: String = localized("chat.messages.list.title")
-
+    
     var isLoadingSearchResults: Bool = false
     var isSearchingMessages: Bool = false
     var isListingMentions: Bool = false
@@ -267,7 +267,7 @@ class MessagesListViewController: BaseViewController {
 extension MessagesListViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         let label = UILabel(frame: collectionView.frame)
         label.textAlignment = .center
         label.textColor = .gray
@@ -282,7 +282,7 @@ extension MessagesListViewController {
             setupSearchBar()
         } else {
             title = data.title
-            refreshControl.addTarget(self, action: #selector(refreshControlDidPull), for: .valueChanged)
+            refreshControl.isHidden == true
             collectionView.refreshControl = refreshControl
         }
     }
@@ -326,6 +326,7 @@ extension MessagesListViewController {
         navigationItem.rightBarButtonItem = cancelButton
         navigationItem.titleView = searchBar
         searchBar.applyTheme()
+        searchBar.isHidden == true
     }
 
     @objc func close() {

@@ -22,6 +22,8 @@ final class SubscriptionsViewController: BaseViewController {
     @IBOutlet weak var labelSortingTitleDescription: UILabel! {
         didSet {
             updateSortingTitleDescription()
+            labelSortingTitleDescription.isHidden = true
+            
         }
     }
 
@@ -29,6 +31,7 @@ final class SubscriptionsViewController: BaseViewController {
         didSet {
             let tapGesture = UITapGestureRecognizer(target: self, action: #selector(recognizeDirectoryTapGesture(_:)))
             viewDirectory.addGestureRecognizer(tapGesture)
+            viewDirectory.isHidden = true
         }
     }
 
@@ -41,6 +44,7 @@ final class SubscriptionsViewController: BaseViewController {
     @IBOutlet weak var labelDirectory: UILabel! {
         didSet {
             labelDirectory.text = localized("directory.title")
+            labelDirectory.isHidden = true
         }
     }
 
@@ -54,6 +58,7 @@ final class SubscriptionsViewController: BaseViewController {
 
     var assigned = false
     var viewModel = SubscriptionsViewModel()
+    
 
     var searchText: String = ""
 
@@ -112,6 +117,7 @@ final class SubscriptionsViewController: BaseViewController {
 
         serversView?.frame = frameForDropDownOverlay
         sortingView?.frame = frameForDropDownOverlay
+        sortingView?.isHidden = true
     }
 
     override func viewWillAppear(_ animated: Bool) {

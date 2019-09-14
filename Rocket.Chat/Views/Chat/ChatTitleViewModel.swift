@@ -43,12 +43,10 @@ final class ChatTitleViewModel {
     }
 
     var imageName: String {
-        if mainThreadMessage != nil {
-            return "Threads"
-        }
+        
 
         guard let subscription = subscription else {
-            return "Channel Small"
+            return ""
         }
 
         if subscription.isDiscussion {
@@ -56,7 +54,7 @@ final class ChatTitleViewModel {
         }
 
         switch subscription.type {
-        case .channel: return "Channel Small"
+        case .channel: return ""
         case .directMessage: return "DM Small"
         case .group: return "Group Small"
         }

@@ -152,7 +152,7 @@
 "subscriptions.channels" = "Каналы";
 "subscriptions.groups" = "Приватные группы";
 "subscriptions.direct_messages" = "Личная переписка";
-"subscriptions.conversations" = "Диалоги";
+"subscriptions.conversations" = "Чаты";
 "subscriptions.you" = "вы";
 "subscriptions.messages" = "Сообщения";
 "subscriptions.list.you_initial" = "Вы";
@@ -182,16 +182,16 @@
 "status.invisible" = "Невидимый";
 
 // New Room View
-"new_room.title" = "Новый канал";
+"new_room.title" = "Новый чат";
 "new_room.buttons.create" = "Создать";
-"new_room.cell.public_channel.title" = "Публичный канал";
+"new_room.cell.public_channel.title" = "Публичный чат";
 "new_room.cell.public_channel.description" = "Каждый может получить доступ к этому каналу";
 "new_room.cell.public_channel.description.public_only" = "Вы можете создавать только общедоступные каналы";
 "new_room.cell.public_channel.description.private_only" = "Вы можете создавать только приватные каналы";
-"new_room.cell.read_only.title" = "Канал только для чтения";
+"new_room.cell.read_only.title" = "Чат только для чтения";
 "new_room.cell.read_only.description" = "Только авторизованные участники могут писать новые сообщения";
-"new_room.group.channel.name" = "Название канала";
-"new_room.cell.channel_name.title" = "Название канала";
+"new_room.group.channel.name" = "Название чата";
+"new_room.cell.channel_name.title" = "Название чата";
 "new_room.group.invite_users" = "Пригласить пользователей";
 "new_room.cell.invite_users.placeholder" = "Пользователи";
 

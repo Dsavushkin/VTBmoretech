@@ -24,7 +24,7 @@ protocol ChatMessageCellProtocol: ChatMessageURLViewProtocol, ChatMessageVideoVi
 final class ChatMessageCell: UICollectionViewCell {
     static let minimumHeight = CGFloat(55)
     static let identifier = "ChatMessageCell"
-
+    
     weak var longPressGesture: UILongPressGestureRecognizer?
     weak var usernameTapGesture: UITapGestureRecognizer?
     weak var avatarTapGesture: UITapGestureRecognizer?
@@ -478,5 +478,6 @@ extension ChatMessageCell {
         labelDate.textColor = theme.auxiliaryText
         labelUsername.textColor = theme.titleText
         updateMessageContent(force: true)
+        
     }
 }
