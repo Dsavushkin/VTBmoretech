@@ -14,7 +14,9 @@ final class SubscriptionCell: BaseSubscriptionCell {
 
     @IBOutlet weak var labelLastMessage: UILabel!
     @IBOutlet weak var labelDate: UILabel!
+    
 
+    
     override func prepareForReuse() {
         super.prepareForReuse()
 
