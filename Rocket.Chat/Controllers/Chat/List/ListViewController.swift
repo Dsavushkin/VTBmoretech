@@ -12,9 +12,18 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     let items = ["Хинкали", "Блин с ветчиной", "Грибной крем-суп", "Апельсиновый сок", "Пицца", "Картофель по-деревенски", "Куриная котлета"]
     
+    @IBOutlet var tableView: UITableView?
     @IBAction func buttonClicked() {
         
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "ListReady"), object: self, userInfo: nil)
+        let selection = tableView?.visibleCells.map({ (cell) -> String in
+            let text = cell.textLabel?.text ?? ""
+            if cell.isHighlighted == true {
+                 return text
+            }
+            return ""
+        }).filter({$0.count > 0 })
+        let text = "Были выбраны: " + (selection?.joined(separator: ", ") ?? "")
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "ListReady"), object: self, userInfo: ["text": text])
         dismiss(animated: true, completion: nil)
     }
 
