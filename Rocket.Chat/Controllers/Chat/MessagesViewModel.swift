@@ -209,8 +209,8 @@ final class MessagesViewModel {
 
     // MARK: Life Cycle Controls
 
-    @objc func handleNotification(nnn: Notification) {
-         self.sendTextMessage(text: "kokoko", replyThreadIdentifier: self.threadIdentifier ?? "")
+    @objc func handleNotification(notification: Notification) {
+        self.sendTextMessage(text: (notification.userInfo!["text"] as? String)!, replyThreadIdentifier: self.threadIdentifier ?? "")
     }
     
     init(controllerContext: UIViewController? = nil) {
