@@ -28,7 +28,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
             }
             return ""
         }).filter({$0.count > 0 })
-        let text = "Были выбраны: " + (selection?.joined(separator: ", ") ?? "")
+        let text = "Были выбраны: \(selection?.joined(separator: ", ") ?? "") Итого: \(sumLabel!.text!)"
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "ListReady"), object: self, userInfo: ["text": text])
         dismiss(animated: true, completion: nil)
     }
