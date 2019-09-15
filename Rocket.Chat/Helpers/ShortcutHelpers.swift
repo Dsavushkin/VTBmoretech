@@ -144,7 +144,7 @@ extension MessagesViewController {
     }
 
     func openActions() {
-        doAfterDismissingPresented { [weak self] in
+        doAfterDismissingPresented { [weak self] in 
             self?.performSegue(withIdentifier: "Channel Actions", sender: nil)
         }
     }

@@ -19,6 +19,7 @@ end
 
 def shared_pods
   # Analytics
+   pod 'QRCodeReader.swift', '~> 10.1.0'
   pod 'Firebase/Core'
 
   # Crash Report
@@ -37,7 +38,7 @@ def shared_pods
 
   # Text Processing
   pod 'RCMarkdownParser', :git => 'https://github.com/RocketChat/RCMarkdownParser.git'
-
+  pod 'QRCodeReaderViewController'
   # Database
   database_pods
 
@@ -64,6 +65,7 @@ target 'Rocket.Chat.ShareExtension' do
 end
 
 target 'Rocket.Chat' do
+ pod 'QRCodeReader.swift', '~> 10.1.0'
   shared_pods
 end
 

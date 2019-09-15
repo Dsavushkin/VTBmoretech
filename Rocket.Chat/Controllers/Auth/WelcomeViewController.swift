@@ -22,6 +22,7 @@ final class WelcomeViewController: BaseViewController {
         }
     }
 
+    
     @IBOutlet weak var subtitleLabel: UILabel! {
         didSet {
             subtitleLabel.text = localized("onboarding.label_subtitle")

@@ -182,16 +182,16 @@
 "status.invisible" = "Невидимый";
 
 // New Room View
-"new_room.title" = "Новый канал";
+"new_room.title" = "Новый чат";
 "new_room.buttons.create" = "Создать";
-"new_room.cell.public_channel.title" = "Публичный канал";
-"new_room.cell.public_channel.description" = "Каждый может получить доступ к этому каналу";
-"new_room.cell.public_channel.description.public_only" = "Вы можете создавать только общедоступные каналы";
-"new_room.cell.public_channel.description.private_only" = "Вы можете создавать только приватные каналы";
-"new_room.cell.read_only.title" = "Канал только для чтения";
+"new_room.cell.public_channel.title" = "Публичный чат";
+"new_room.cell.public_channel.description" = "Каждый может получить доступ к этому чату";
+"new_room.cell.public_channel.description.public_only" = "Вы можете создавать только общедоступные чату";
+"new_room.cell.public_channel.description.private_only" = "Вы можете создавать только приватные чаты";
+"new_room.cell.read_only.title" = "Чат только для чтения";
 "new_room.cell.read_only.description" = "Только авторизованные участники могут писать новые сообщения";
-"new_room.group.channel.name" = "Название канала";
-"new_room.cell.channel_name.title" = "Название канала";
+"new_room.group.channel.name" = "Название чата";
+"new_room.cell.channel_name.title" = "Название чата";
 "new_room.group.invite_users" = "Пригласить пользователей";
 "new_room.cell.invite_users.placeholder" = "Пользователи";
 
@@ -200,7 +200,7 @@
 
 // Chat
 "chat.channel_preview_view.title" = "Это предварительный просмотр #%@";
-"chat.channel_preview_view.join" = "Присоединиться к каналу";
+"chat.channel_preview_view.join" = "Присоединиться к чату";
 "chat.dm.start_conversation" = "Это начало вашего разговора с %@";
 "chat.channel.start_conversation" = "Это начало разговора на %@";
 "chat.read_only" = "Эта комната доступна только для чтения";
@@ -280,11 +280,11 @@
 "chat.several_typing" = "several users are typing..."; // TODO
 
 // Message Types
-"chat.message.type.room_name_changed" = "Название канала изменено на: %@ by %@";
+"chat.message.type.room_name_changed" = "Название чата изменено на: %@ by %@";
 "chat.message.type.user_added_by" = "Пользователь %@ добавлен пользователем %@";
 "chat.message.type.user_removed_by" = "Пользователь %@ удален пользователем %@";
 "chat.message.type.user_left" = "Покинул канал";
-"chat.message.type.user_joined" = "Присоединился к каналу";
+"chat.message.type.user_joined" = "Присоединился к чату";
 "chat.message.type.user_muted" = "Пользователь %@ заглушен пользователем %@";
 "chat.message.type.user_unmuted" = "Пользователь %@ перестал быть заглушенным по решению %@";
 "chat.message.type.welcome" = "Добро пожаловать %@";
@@ -292,7 +292,7 @@
 "chat.message.type.subscription_role_added" = "%@ был назначен %@ пользователем %@";
 "chat.message.type.subscription_role_removed" = "%@ больше не %@ по решению %@";
 "chat.message.type.room_archived" = "Этот канал был заархивирован пользователем %@";
-"chat.message.type.room_unarchived" = "Этот канал был разархивирован пользователем %@";
+"chat.message.type.room_unarchived" = "Этот чат был разархивирован пользователем %@";
 "chat.message.type.message_pinned" = "Прикрепленное сообщение:";
 "chat.message.type.message_snippeted" = "Created a snippet: \"%@\""; // TODO
 "chat.message.type.room_changed_privacy" = "Room privacy changed to \"%@\" by %@"; // TODO

@@ -38,6 +38,7 @@ final class SubscriptionsViewController: BaseViewController {
         }
     }
 
+    @IBOutlet weak var intarfaceSegment: UISegmentedControl!
     @IBOutlet weak var labelDirectory: UILabel! {
         didSet {
             labelDirectory.text = localized("directory.title")

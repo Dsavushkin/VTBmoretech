@@ -913,6 +913,7 @@
 		99F530A120D0F08A004EC060 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F530A020D0F08A004EC060 /* BaseTableViewController.swift */; };
 		99F8FAED20B66F210025FEEF /* ImageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F8FAEC20B66F210025FEEF /* ImageCoordinator.swift */; };
 		A0FFC1611E8A9D8D00A1B5EA /* TintedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FFC1601E8A9D8D00A1B5EA /* TintedTextField.swift */; };
+		AC73900C232E248F004CD553 /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC73900B232E248F004CD553 /* CustomSegmentedControl.swift */; };
 		B5893BF41F6C4A5F00365768 /* UserReviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5893BF31F6C4A5E00365768 /* UserReviewManager.swift */; };
 		B5893BF61F6C4B1D00365768 /* UserReviewManagerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5893BF51F6C4B1D00365768 /* UserReviewManagerSpec.swift */; };
 		D10E9C1A1F643457007F1796 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10E9C191F643457007F1796 /* Channel.swift */; };
@@ -1907,6 +1908,7 @@
 		99F8FAEC20B66F210025FEEF /* ImageCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCoordinator.swift; sourceTree = "<group>"; };
 		A0FFC1601E8A9D8D00A1B5EA /* TintedTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TintedTextField.swift; sourceTree = "<group>"; };
 		AAC8D92081FF042E089F3063 /* Pods-Rocket.Chat.beta.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rocket.Chat.beta.xcconfig"; path = "Pods/Target Support Files/Pods-Rocket.Chat/Pods-Rocket.Chat.beta.xcconfig"; sourceTree = "<group>"; };
+		AC73900B232E248F004CD553 /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
 		B5893BF31F6C4A5E00365768 /* UserReviewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserReviewManager.swift; sourceTree = "<group>"; };
 		B5893BF51F6C4B1D00365768 /* UserReviewManagerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserReviewManagerSpec.swift; sourceTree = "<group>"; };
 		BCF38696E8EC385488688390 /* Pods-Rocket.Chat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rocket.Chat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rocket.Chat/Pods-Rocket.Chat.debug.xcconfig"; sourceTree = "<group>"; };
@@ -2797,6 +2799,7 @@
 				41B554C41FBF0C71000510B7 /* UIWindowExtensions.swift */,
 				41BAE3E61D71B26C00C2445A /* URLExtension.swift */,
 				8076FDE52048CD0600114F28 /* UserDefaults+Group.swift */,
+				AC73900B232E248F004CD553 /* CustomSegmentedControl.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -5383,6 +5386,7 @@
 				D1C536CE1F688B7100EBA8D9 /* UIFontExtensions.swift in Sources */,
 				80A2A2AB2073BD0800857DAF /* RealmCurrent.swift in Sources */,
 				80B2D99320E54AD4002F4149 /* UIViewControllerPushOrPresent.swift in Sources */,
+				AC73900C232E248F004CD553 /* CustomSegmentedControl.swift in Sources */,
 				33F67A40212BFC40004EB4A0 /* UnmanagedUser.swift in Sources */,
 				993B7B3E215F0A270067B962 /* FileCell.swift in Sources */,
 				8013F8761FD6B5E000EE1A4E /* VersionMiddleware.swift in Sources */,
