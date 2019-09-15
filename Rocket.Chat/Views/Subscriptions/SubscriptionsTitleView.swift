@@ -21,7 +21,7 @@ final class SubscriptionsTitleView: UIView {
 
     @IBOutlet weak var labelMessages: UILabel! {
         didSet {
-            labelMessages.text = localized("subscriptions.messages")
+            labelMessages.text = localized("Чаты")
         }
     }
 
@@ -30,6 +30,7 @@ final class SubscriptionsTitleView: UIView {
             buttonServer.semanticContentAttribute = .forceRightToLeft
             buttonServer.layer.cornerRadius = 5
             buttonServer.layer.masksToBounds = true
+            buttonServer.isHidden = true
         }
     }
 

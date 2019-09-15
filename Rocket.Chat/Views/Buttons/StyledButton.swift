@@ -8,6 +8,9 @@
 
 import UIKit
 
+enum Colors {
+    static let coolBlue = UIColor(red: 42/255, green: 126/255, blue: 254/255, alpha: 1.0)
+}
 final class StyledButton: UIButton {
 
     // MARK: - Nested Types
@@ -52,6 +55,39 @@ final class StyledButton: UIButton {
         super.awakeFromNib()
         applyStyle()
     }
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupButton()
+    }
+    
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setupButton()
+    }
+    
+    
+    func setupButton() {
+        setShadow()
+        setTitleColor(.white, for: .normal)
+        
+        backgroundColor      = Colors.coolBlue
+        titleLabel?.font     = UIFont(name: "AvenirNext-DemiBold", size: 18)
+        layer.cornerRadius   = 25
+        layer.borderWidth    = 3.0
+        layer.borderColor    = UIColor.darkGray.cgColor
+    }
+    
+    
+    private func setShadow() {
+        layer.shadowColor   = UIColor.black.cgColor
+        layer.shadowOffset  = CGSize(width: 0.0, height: 6.0)
+        layer.shadowRadius  = 8
+        layer.shadowOpacity = 0.5
+        clipsToBounds       = true
+        layer.masksToBounds = false
+    }
+    
 
     override func imageRect(forContentRect contentRect: CGRect) -> CGRect {
         var imageRect = contentRect

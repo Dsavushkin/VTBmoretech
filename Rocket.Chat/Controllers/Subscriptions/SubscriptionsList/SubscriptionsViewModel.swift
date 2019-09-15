@@ -123,7 +123,7 @@ class SubscriptionsViewModel {
                 assorter.registerSection(name: localized("subscriptions.direct_messages"), objects: queryDataDirectMessages)
             } else {
                 let selectedGroupingOptions = SubscriptionsSortingManager.selectedGroupingOptions
-                let title = !selectedGroupingOptions.isEmpty ? localized("subscriptions.conversations") : ""
+                let title = !selectedGroupingOptions.isEmpty ? localized("Чаты") : ""
                 assorter.registerSection(name: title, objects: queryItems)
             }
 

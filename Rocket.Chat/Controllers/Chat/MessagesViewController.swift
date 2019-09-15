@@ -56,7 +56,14 @@ final class MessagesViewController: RocketChatViewController, MessagesListProtoc
     }
 
     var chatPreviewModeView: ChatPreviewModeView?
-
+    @IBOutlet weak var connectServerButton: UIButton! {
+        didSet {
+            connectServerButton.setTitle(
+                localized("onboarding.button_connect_server"),
+                for: .normal
+            )
+        }
+    }
     var emptyStateImageView: UIImageView?
     var documentController: UIDocumentInteractionController?
 
