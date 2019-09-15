@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class ListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -21,6 +22,12 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet var tableView: UITableView?
     @IBAction func buttonClicked() {
         
+        let activityView = UIActivityIndicatorView(style: .whiteLarge)
+        activityView.center = self.view.center
+        activityView.startAnimating()
+        
+        self.view.addSubview(activityView)
+        
         let selection = tableView?.visibleCells.map({ (cell) -> String in
             let text = cell.textLabel?.text ?? ""
             if cell.isHighlighted == true {
@@ -30,7 +37,73 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         }).filter({$0.count > 0 })
         let text = "Были выбраны: \(selection?.joined(separator: ", ") ?? "") Итого: \(sumLabel!.text!)"
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "ListReady"), object: self, userInfo: ["text": text])
-        dismiss(animated: true, completion: nil)
+        
+        let json: [String: Any] = ["addresses": [],
+            "deviceId": "test_device_id",
+            "deviceType": 1]
+        
+        let jsonData = try? JSONSerialization.data(withJSONObject: json)
+
+        let url = URL(string: "http://89.208.84.235:31080/api/v1/session")!
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.httpBody = jsonData
+        request.setValue("32852185-988b-4de6-8df3-7dd340942cf0", forHTTPHeaderField: "FPSID")
+        request.setValue("application/json", forHTTPHeaderField:"Content-Type")
+
+        guard let sum = sumLabel!.text?.components(separatedBy: " ")[0], let cur = Double(sum) else {return}
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data, error == nil else {
+                print(error?.localizedDescription ?? "No data")
+                return
+            }
+            let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
+            if let responseJSON = responseJSON as? [String: Any] {
+                print(responseJSON)
+                
+                let json: [String: Any] = [  "amount": cur,
+                                             "currencyCode": 810,
+                                             "description": "test description",
+                                             "number": JSON(responseJSON)["data"].rawString()!,
+                                             "payer": "ab0ae25f2dfb1832961f051e0050087fd9d76885",
+                                             "recipient": "3c63a8ea371fa1c582cb6f158f8c8be7cf17cba5"]
+                
+                let jsonData = try? JSONSerialization.data(withJSONObject: json)
+                
+                let url = URL(string: "http://89.208.84.235:31080/api/v1/invoice")!
+                var request = URLRequest(url: url)
+                request.httpMethod = "POST"
+                request.httpBody = jsonData
+                request.setValue("32852185-988b-4de6-8df3-7dd340942cf0", forHTTPHeaderField: "FPSID")
+                request.setValue("application/json", forHTTPHeaderField:"Content-Type")
+                
+                let sessionConfig = URLSessionConfiguration.default
+                sessionConfig.timeoutIntervalForRequest = 30.0
+                sessionConfig.timeoutIntervalForResource = 60.0
+                let session = URLSession(configuration: sessionConfig)
+                
+                let task = URLSession.shared.dataTask(with: request) { data, response, error in
+                    guard let data = data, error == nil else {
+                        print(error?.localizedDescription ?? "No data")
+                        return
+                    }
+                    let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
+                    if let responseJSON = responseJSON as? [String: Any] {
+                        print(responseJSON)
+                        DispatchQueue.main.async {
+                        activityView.stopAnimating()
+                        self.dismiss(animated: true, completion: nil)
+                        }
+                    }
+                }
+                
+                task.resume()
+                
+            }
+        }
+        
+        task.resume()
+        
     }
 
     override func viewDidLoad() {
