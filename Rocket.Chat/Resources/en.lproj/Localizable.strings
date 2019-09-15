@@ -253,7 +253,7 @@
 "chat.upload.uploading_file" = "Uploading \"%@\"";
 "chat.upload.take_photo" = "Take a photo";
 "chat.upload.shoot_video" = "Record video";
-"chat.upload.choose_from_library" = "Choose from library";
+"chat.upload.choose_from_library" = "Load check photo";
 "chat.upload.import_file" = "Attach files";
 "chat.upload.draw" = "Draw something";
 
