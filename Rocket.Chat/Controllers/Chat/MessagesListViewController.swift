@@ -265,9 +265,23 @@ class MessagesListViewController: BaseViewController {
 // MARK: ViewController
 
 extension MessagesListViewController {
+    
+    @objc func buttonAction(sender: UIButton!) {
+        print("Button tapped")
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let button = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 50))
+        button.backgroundColor = .green
+        button.setTitle("Test Button", for: .normal)
+      
+        
+        self.view.addSubview(button)
+        
+        
+        
         let label = UILabel(frame: collectionView.frame)
         label.textAlignment = .center
         label.textColor = .gray
@@ -286,6 +300,8 @@ extension MessagesListViewController {
             collectionView.refreshControl = refreshControl
         }
     }
+    
+
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
