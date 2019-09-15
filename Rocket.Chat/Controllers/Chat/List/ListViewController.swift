@@ -10,8 +10,14 @@ import UIKit
 
 class ListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    let items = ["Хинкали", "Блин с ветчиной", "Грибной крем-суп", "Апельсиновый сок", "Пицца", "Картофель по-деревенски", "Куриная котлета"]
+    struct Item {
+        let name: String
+        let price: Double
+    }
     
+    let items: Array<Item> = [Item(name: "Блин с ветчиной", price: 120) ,Item(name: "Грибной крем-суп", price: 300) , Item(name: "Апельсиновый сок", price: 80), Item(name: "Пицца Маргарита", price: 500),Item(name:"Картофель фри", price: 125) , Item(name: "Куриная котлета", price: 150)]
+
+    @IBOutlet var sumLabel: UILabel?
     @IBOutlet var tableView: UITableView?
     @IBAction func buttonClicked() {
         
@@ -56,12 +62,17 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = items[indexPath.item]
+        let cell = UITableViewCell(style: .value1, reuseIdentifier: "cell")
+        cell.textLabel?.text = items[indexPath.item].name
+        cell.detailTextLabel?.text = String(items[indexPath.item].price)
+
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.cellForRow(at: indexPath)?.isHighlighted = !(tableView.cellForRow(at: indexPath)?.isHighlighted ?? true)
+        if let title = sumLabel!.text?.components(separatedBy: " ")[0], let cur = Double(title) {
+            sumLabel!.text = "\(cur + items[indexPath.item].price) ₽"
+        }
     }
 }
