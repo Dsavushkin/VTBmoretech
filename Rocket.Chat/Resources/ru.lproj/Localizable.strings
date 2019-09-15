@@ -253,7 +253,7 @@
 "chat.upload.uploading_file" = "Загрузить \"%@\"";
 "chat.upload.take_photo" = "Сделать фото";
 "chat.upload.shoot_video" = "Записать видео";
-"chat.upload.choose_from_library" = "Выбрать из библиотеки";
+"chat.upload.choose_from_library" = "Добавить фото чека";
 "chat.upload.import_file" = "Прикрепить файлы";
 "chat.upload.draw" = "Нарисовать что-нибудь";
 

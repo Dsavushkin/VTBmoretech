@@ -36,11 +36,9 @@ extension MessagesViewController: MediaPicker, UIImagePickerControllerDelegate, 
             self.openPhotosLibrary()
         }
 
-        addAction("chat.upload.import_file", image: #imageLiteral(resourceName: "AttachFiles")) { _ in
-            self.openDocumentPicker()
-        }
+      
 
-        addAction("chat.upload.draw", image: #imageLiteral(resourceName: "DrawSomething")) { _ in
+        addAction("По QR коду", image: #imageLiteral(resourceName: "plusWhite")) { _ in
             self.openDrawing()
         }
 
