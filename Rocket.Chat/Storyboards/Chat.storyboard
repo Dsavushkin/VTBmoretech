@@ -427,8 +427,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1275 ₽" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MZg-wQ-XQT">
-                                                <rect key="frame" x="164" y="17" width="52" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1345 ₽" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MZg-wQ-XQT">
+                                                <rect key="frame" x="162" y="17" width="54" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -495,7 +495,7 @@
                         <viewLayoutGuide key="safeArea" id="ZAt-Jp-EtN"/>
                     </view>
                     <connections>
-                        <outlet property="sumLabel" destination="XdR-Wu-bIT" id="0y9-Xt-umm"/>
+                        <outlet property="sumLabel" destination="XdR-Wu-bIT" id="SJO-6M-HK9"/>
                         <outlet property="tableView" destination="zLn-AC-orI" id="zOi-rW-a5w"/>
                     </connections>
                 </viewController>

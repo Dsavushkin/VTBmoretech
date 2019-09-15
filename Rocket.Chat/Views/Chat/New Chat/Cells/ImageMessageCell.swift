@@ -98,7 +98,12 @@ class ImageMessageCell: BaseImageMessageCell, SizingCell {
             return
         }
 
-        delegate?.openImageFromCell(url: imageURL, thumbnail: imageView)
+        let storyboard = UIStoryboard(name: "Chat", bundle: nil)
+        let modalViewController = storyboard.instantiateViewController(withIdentifier: "ListViewController")
+        modalViewController.modalPresentationStyle = .overCurrentContext
+        self.window?.rootViewController?.present(modalViewController, animated: true, completion: nil)
+
+       // delegate?.openImageFromCell(url: imageURL, thumbnail: imageView)
     }
 }
 
